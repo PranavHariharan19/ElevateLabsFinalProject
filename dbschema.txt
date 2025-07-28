@@ -1,0 +1,49 @@
+desc students;
++-----------------+--------------+------+-----+---------+----------------+
+| Field           | Type         | Null | Key | Default | Extra          |
++-----------------+--------------+------+-----+---------+----------------+
+| id              | int          | NO   | PRI | NULL    | auto_increment |
+| full_name       | varchar(100) | YES  |     | NULL    |                |
+| phone_number    | varchar(15)  | YES  |     | NULL    |                |
+| email           | varchar(100) | YES  |     | NULL    |                |
+| date_of_birth   | date         | YES  |     | NULL    |                |
+| gender          | varchar(10)  | YES  |     | NULL    |                |
+| category        | varchar(20)  | YES  |     | NULL    |                |
+| nationality     | varchar(50)  | YES  |     | NULL    |                |
+| course_required | varchar(100) | YES  |     | NULL    |                |
+| entrance_marks  | double       | YES  |     | NULL    |                |
+| twelfth_marks   | double       | YES  |     | NULL    |                |
+| address         | text         | YES  |     | NULL    |                |
+| city            | varchar(50)  | YES  |     | NULL    |                |
+| state           | varchar(50)  | YES  |     | NULL    |                |
++-----------------+--------------+------+-----+---------+----------------+
+
+
+desc courses;
++-----------------+--------------+------+-----+---------+----------------+
+| Field           | Type         | Null | Key | Default | Extra          |
++-----------------+--------------+------+-----+---------+----------------+
+| course_id       | int          | NO   | PRI | NULL    | auto_increment |
+| course_name     | varchar(100) | YES  |     | NULL    |                |
+| total_seats     | int          | YES  |     | NULL    |                |
+| available_seats | int          | YES  |     | NULL    |                |
+| cutoff_general  | int          | YES  |     | NULL    |                |
+| cutoff_obc      | int          | YES  |     | NULL    |                |
+| cutoff_sc       | int          | YES  |     | NULL    |                |
+| cutoff_st       | int          | YES  |     | NULL    |                |
+| cutoff_pwd      | int          | YES  |     | NULL    |                |
+| cutoff_foreign  | int          | YES  |     | NULL    |                |
++-----------------+--------------+------+-----+---------+----------------+
+
+
+desc applications;
++----------------+-------------+------+-----+---------+----------------+
+| Field          | Type        | Null | Key | Default | Extra          |
++----------------+-------------+------+-----+---------+----------------+
+| application_id | int         | NO   | PRI | NULL    | auto_increment |
+| student_id     | int         | YES  | MUL | NULL    |                |
+| course_id      | int         | YES  | MUL | NULL    |                |
+| entrance_rank  | int         | YES  |     | NULL    |                |
+| status         | varchar(20) | YES  |     | Pending |                |
++----------------+-------------+------+-----+---------+----------------+
+
